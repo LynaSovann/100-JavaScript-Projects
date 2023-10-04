@@ -10,4 +10,7 @@ function handleSubmit(e) {
   const result = parseFloat(tempValue).toFixed(2);
   resultText.innerText = `${inputElement.value} ft = ${result} m`;
   inputElement.value = "";
+  console.log(inputElement.value)
 }
+
+
