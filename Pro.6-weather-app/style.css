@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #123456;
+}
+
+body {
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.container h1 {
+  color: var(--primary-color);
+
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0 1rem 0;
+}
+
+.input-container .input {
+  flex: 1;
+  margin-right: 10px;
+  font-size: 16px;
+  padding: .5rem .7rem;
+  outline: none;
+  border-radius: 4px;
+  color: var(--primary-color);
+  font-weight: bold;
+  border: solid var(--primary-color) 2px;
+}
+
+.input-container .input::placeholder {
+  font-weight: 100;
+}
+
+.input-container .go-btn {
+  font-size: 16px;
+  padding: .5rem .7rem;
+  cursor: pointer;
+  border: solid var(--primary-color) 2px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  transition: background .5s, color .5s, transform 0.5s;
+}
+
+.input-container .go-btn:hover {
+  background: #fff;
+  color: var(--primary-color);
+}
+
+.input-container .go-btn:active {
+  transform: scale(1.1);
+}
+
+.result-text {
+  text-align: center;
+  color: var(--primary-color);
+  display: none;
+}
+
+.celsius {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: var(--primary-color);
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.icon {
+  width: 200px;
+  text-align: center;
+}
+
+.other-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.other-container .no-class {
+  height: 100px;
+  background:rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--primary-color);
+}
+
+.result {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.search {
+  font-weight: bold;
+}
+
+.weather {
+  display: none;
+}
+
+p {
+  text-align: center;
+}
+
+.not-found {
+  color: red;
+  display: none;
+}

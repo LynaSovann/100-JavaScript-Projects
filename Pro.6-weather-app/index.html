@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Weather App</h1>
+      <div class="input-container">
+        <input
+          type="text"
+          placeholder="enter city name"
+          class="input"
+          id="input"
+          autocomplete="off"
+          autofocus
+        />
+        <button id="go-btn" class="go-btn">go</button>
+      </div>
+      <div class="result-text" id="result-text">
+        Search result &QUOT; <span class="search" id="search"></span>&QUOT;
+      </div>
+      <div class="weather" id="weather">
+        <div class="image-container">
+          <img src="" class="icon" id="icon" />
+        </div>
+        <div class="celsius" id="celsius"></div>
+        <div class="other-container">
+          <div class="no-class">
+            <p>Humidity</p>
+            <div class="result" data-humidity></div>
+          </div>
+          <div class="no-class">
+            <p >Pressure</p>
+            <div class="result" data-pressure></div>
+          </div>
+          <div class="no-class">
+            <p>Wind</p>
+            <div class="result" data-wind>10 km/h</div>
+          </div>
+        </div>
+      </div>
+      <p class="not-found" id="not-found">City not found!</p>
+    </div>
+  </body>
+</html>
