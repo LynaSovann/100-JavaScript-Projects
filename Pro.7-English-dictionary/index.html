@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple dictionary</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Simple Dictionary</h1>
+      <form class="form" id="form">
+        <input
+          type="text"
+          placeholder="type anyword"
+          autocomplete="off"
+          autofocus
+          class="input"
+          id="input"
+        />
+        <button type="submit" class="btn" id="btn">Find</button>
+      </form>
+      <p id="before-search" class="before-search"></p>
+      <div class="sub-container" id="sub-container">
+        <h2 id="search-word" class="search-word"></h2>
+        <div class="meanings" id="meanings"></div>
+
+        <audio src="" class="audio" id="audio" controls></audio>
+      </div>
+    </div>
+  </body>
+</html>
