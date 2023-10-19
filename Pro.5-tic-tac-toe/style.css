@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+*,
+*::after,
+*::before {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+:root {
+  --primary-color: #123456;
+  --box-size: 100px;
+}
+
+body {
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.box {
+  width: var(--box-size);
+  height: var(--box-size);
+  background: white;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.box.x,
+.box.o {
+  cursor: no-drop;
+}
+
+.box.x,
+.box.o,
+.container.x .box:not(.x):not(.o):hover,
+.container.o .box:not(.x):not(.o):hover {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box.o::before,
+.box.o::after,
+.box.x::before,
+.box.x::after {
+  background: var(--primary-color);
+}
+
+.box.o::before,
+.box.o::after,
+.box.x::before,
+.box.x::after,
+.container.x .box:not(.x):not(.o):hover::after,
+.container.x .box:not(.x):not(.o):hover::before,
+.container.o .box:not(.x):not(.o):hover::after,
+.container.o .box:not(.x):not(.o):hover::before {
+  content: "";
+  position: absolute;
+}
+
+.container.x .box:not(.x):not(.o):hover::before,
+.container.x .box:not(.x):not(.o):hover::after,
+.container.o .box:not(.x):not(.o):hover::before {
+  background: lightblue;
+}
+
+.box.x::before,
+.box.x::after,
+.container.x .box:not(.x):not(.o):hover::after,
+.container.x .box:not(.x):not(.o):hover::before {
+  height: calc(var(--box-size) * 0.9);
+  width: calc(var(--box-size) * 0.15);
+}
+
+.box.x::before,
+.container.x .box:not(.x):not(.o):hover::before {
+  transform: rotate(45deg);
+}
+
+.box.x::after,
+.container.x .box:not(.x):not(.o):hover::after {
+  transform: rotate(-45deg);
+}
+
+.box.o::before,
+.box.o::after,
+.container.o .box:not(.x):not(.o):hover::after,
+.container.o .box:not(.x):not(.o):hover::before {
+  border-radius: 50%;
+}
+
+.box.o::before,
+.container.o .box:not(.x):not(.o):hover::before {
+  width: calc(var(--box-size) * 0.9);
+  height: calc(var(--box-size) * 0.9);
+}
+
+.box.o::after,
+.container.o .box:not(.x):not(.o):hover::after {
+  height: calc(var(--box-size) * 0.65);
+  width: calc(var(--box-size) * 0.65);
+  background: white;
+}
