@@ -20,10 +20,10 @@ function countDown () {
     const m = minute % 60;
     const s = second % 60;
 
-    dayElement.innerText = d;
-    hourElement.innerText = h;
-    minuteElement.innerText = m;
-    secondElement.innerText = s;
+    dayElement.innerText = d < 10 ? "0" + d : d;
+    hourElement.innerText = h < 10 ? "0" + h : h;
+    minuteElement.innerText = m < 10 ? "0" + m : m;
+    secondElement.innerText = s < 10 ? "0" + s : s;
 
     setTimeout(() => {
         countDown();

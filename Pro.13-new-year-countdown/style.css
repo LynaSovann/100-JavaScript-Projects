@@ -29,4 +29,7 @@ div {
 
 h1 {
     font-size: 7.5rem;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
 }
